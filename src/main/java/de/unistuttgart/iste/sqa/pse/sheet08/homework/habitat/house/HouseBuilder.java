@@ -106,7 +106,32 @@ public final class HouseBuilder {
 		if(wall == null){
 			throw  new IllegalArgumentException("Wall must not be empty");
 		}
-		
+		int wallStart;
+		int wallEnd;
+
+		if(wall.isVertical()){
+			int column = wall.getStart().getColumn();
+			wallStart = wall.getStart().getRow();
+			wallEnd = wall.getEnd().getRow();
+			for (int currentRow = wallStart; currentRow <= wallEnd; currentRow++) {
+				if(wall.getDoor().isPresent() && currentRow == wall.getDoor().get().getRow()){
+					continue;
+				}
+				territoryBuilder.wallAt(new Location(currentRow, column));
+			}
+		} else if (wall.isHorizontal()) {
+			int row = wall.getStart().getRow();
+			wallStart = wall.getStart().getColumn();
+			wallEnd = wall.getEnd().getColumn();
+			for(int currentColumn = wallStart; currentColumn <= wallEnd; currentColumn++){
+				if(wall.getDoor().isPresent() && currentColumn == wall.getDoor().get().getColumn()){
+					continue;
+				}
+				territoryBuilder.wallAt(new Location(row, currentColumn));
+			}
+
+		}
+
 	}
 
 	/**

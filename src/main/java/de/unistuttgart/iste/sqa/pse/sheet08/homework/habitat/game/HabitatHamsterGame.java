@@ -22,7 +22,7 @@ public final class HabitatHamsterGame extends SimpleHamsterGame {
 
 		// TODO Implement exercise 2 (d) between here..
 		HouseWall topLeftWall = new HouseWall(new Location(1, 1), new Location(1, 8));
-		topLeftWall.addDoor(new Location(1,4));
+		topLeftWall.addDoor(new Location(1,3));
 		HouseWall topRightWall = new HouseWall(new Location(2,7), new Location(2, 10));
 		HouseWall leftWall = new HouseWall(new Location(2,1), new Location(5, 1));
 		HouseWall rightWall = new HouseWall(new Location(3, 10), new Location(5, 10));
