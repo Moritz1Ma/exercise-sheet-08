@@ -7,7 +7,7 @@ public class Ferry extends PublicTransportation {
 
 	/**
 	 * Creates a new Ferry object.
-	 * Moritz mag enten.
+	 * Moritz mag enten. Quentin stinkt.
 	 */
 
 	public Ferry() {
