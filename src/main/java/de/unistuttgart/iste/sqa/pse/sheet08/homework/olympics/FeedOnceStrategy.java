@@ -1,16 +1,23 @@
 package de.unistuttgart.iste.sqa.pse.sheet08.homework.olympics;
 
+import de.hamstersimulator.objectsfirst.external.model.Hamster;
+
 /**
  * TODO write documentation here.
  *
- * @author your name
+ * @author Quentin Hadar
  */
 public final class FeedOnceStrategy implements FeedingStrategy {
-	// if required, put attributes for task (d) here
+
+	private int amount = 1;
 
 	@Override
 	public boolean isFeedingRequired() {
-		// put code for task (d) here
+		if(this.amount == 1) {
+			this.amount--;
+			return true;
+		}
+		this.amount = 1;
 		return false;
 	}
 }
