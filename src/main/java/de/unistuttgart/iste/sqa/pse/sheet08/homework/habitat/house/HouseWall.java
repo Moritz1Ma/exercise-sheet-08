@@ -46,6 +46,8 @@ public final class HouseWall {
 	public HouseWall(final Location start, final Location end) {
 		// TODO implement exercise 2 (b) here.
 
+
+
 		this.start = start;
 		this.end = end;
 		this.door = Optional.empty();

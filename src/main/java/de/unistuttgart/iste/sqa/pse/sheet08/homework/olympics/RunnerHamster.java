@@ -17,6 +17,8 @@ import de.hamstersimulator.objectsfirst.external.model.Territory;
  */
 public final class RunnerHamster extends Hamster {
 	// the strategies this runner follows during the race
+
+	protected int intensityLevel;
 	protected RacePlan runningTactic;
 	protected FeedingStrategy feedingTactic;
 
