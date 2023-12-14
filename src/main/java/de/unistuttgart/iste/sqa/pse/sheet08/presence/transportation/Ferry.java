@@ -7,7 +7,9 @@ public class Ferry extends PublicTransportation {
 
 	/**
 	 * Creates a new Ferry object.
+	 * Moritz mag enten.
 	 */
+
 	public Ferry() {
 		super("Ferry");
 	}
