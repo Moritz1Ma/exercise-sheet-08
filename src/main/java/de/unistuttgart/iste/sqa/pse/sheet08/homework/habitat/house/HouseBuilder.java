@@ -103,6 +103,10 @@ public final class HouseBuilder {
 	 */
 	private void buildWall(final HouseWall wall) {
 		// TODO implement exercise 2 (e) here.
+		if(wall == null){
+			throw  new IllegalArgumentException("Wall must not be empty");
+		}
+		
 	}
 
 	/**

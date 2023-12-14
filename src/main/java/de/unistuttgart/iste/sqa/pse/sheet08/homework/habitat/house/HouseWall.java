@@ -76,9 +76,9 @@ public final class HouseWall {
     public void addDoor(final Location newDoor) {
         if (newDoor == null){
             throw new IllegalArgumentException("Location for the door must not be null");
-        } else if(!isValidDoorOnHorizontalWall(newDoor) | !isValidDoorOnVerticalWall(newDoor)){
+        } else if(!isValidDoorOnHorizontalWall(newDoor) && !isValidDoorOnVerticalWall(newDoor)){
             throw new IllegalArgumentException("Door is not in a valid location");
-        } else if (!this.door.isEmpty()) {
+        } else if (!this.door.isEmpty()){
             throw new IllegalArgumentException("Wall already has door");
         }
 
