@@ -74,7 +74,17 @@ public final class HouseWall {
      * @param newDoor door to be added into the housewall.
      */
     public void addDoor(final Location newDoor) {
-        // TODO implement exercise 2 (c) here.
+        if (newDoor == null){
+            throw new IllegalArgumentException("Location for the door must not be null");
+        } else if(!isValidDoorOnHorizontalWall(newDoor) | !isValidDoorOnVerticalWall(newDoor)){
+            throw new IllegalArgumentException("Door is not in a valid location");
+        } else if (!this.door.isEmpty()) {
+            throw new IllegalArgumentException("Wall already has door");
+        }
+
+        this.door = Optional.of(newDoor);
+
+
     }
 
     /**
