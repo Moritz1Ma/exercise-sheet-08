@@ -50,8 +50,6 @@ public final class OlympicsHamsterGame extends SimpleHamsterGame {
 
         runRace(speedy);
 
-        speedy.write("Energy Remaining: " + speedy.getEnergyRemaining());
-
         if (speedy.hasFinished()) {
             speedy.write("I needed " + speedy.getActionsTaken() + " actions!");
         }
