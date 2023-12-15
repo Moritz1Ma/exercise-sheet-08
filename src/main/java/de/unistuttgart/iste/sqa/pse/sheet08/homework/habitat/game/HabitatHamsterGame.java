@@ -4,9 +4,13 @@ import de.hamstersimulator.objectsfirst.datatypes.Direction;
 import de.hamstersimulator.objectsfirst.datatypes.Location;
 import de.hamstersimulator.objectsfirst.external.model.TerritoryBuilder;
 import de.hamstersimulator.objectsfirst.external.simple.game.SimpleHamsterGame;
+import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.Door;
 import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.House;
 import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.HouseBuilder;
 import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.HouseWall;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The habitat hamster game.
@@ -21,7 +25,8 @@ public final class HabitatHamsterGame extends SimpleHamsterGame {
 		TerritoryBuilder territoryBuilder = game.getNewTerritoryBuilder();
 
 		// TODO Implement exercise 2 (d) between here..
-		HouseWall topLeftWall = new HouseWall(new Location(1, 1), new Location(1, 8));
+		Set<HouseWall> walls = new HashSet<>();
+		HouseWall topLeftWall = new HouseWall(new Location(1, 1), new Location(1, 7));
 		topLeftWall.addDoor(new Location(1,3));
 		HouseWall topRightWall = new HouseWall(new Location(2,7), new Location(2, 10));
 		HouseWall leftWall = new HouseWall(new Location(2,1), new Location(5, 1));

@@ -102,7 +102,6 @@ public final class HouseBuilder {
 	 * @param wall the housewall to be put on the territory.
 	 */
 	private void buildWall(final HouseWall wall) {
-		// TODO implement exercise 2 (e) here.
 		if(wall == null){
 			throw  new IllegalArgumentException("Wall must not be empty");
 		}

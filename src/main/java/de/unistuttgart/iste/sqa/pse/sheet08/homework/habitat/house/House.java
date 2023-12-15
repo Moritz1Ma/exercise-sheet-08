@@ -1,5 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house;
 
+
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -28,8 +30,13 @@ public final class House {
 	 * @return doors of the house.
 	 */
 	public Set<Door> getDoors() {
-		// TODO implement 2 (g) here
-		return Set.of(); // TODO remove this line if necessary.
+		Set<Door> doors = new HashSet<>();
+		for (final HouseWall wall: this.getWalls()){
+			if(wall.getDoor().isPresent()){
+				doors.add(new Door(wall.getDoor().get()));
+			}
+		}
+		return doors;
 	}
 
 	/**
