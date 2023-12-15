@@ -26,7 +26,7 @@ import java.util.Optional;
  * housewall has a door, that door must be located in between start and end. In
  * addition, the door must not be at the very start or end of the housewall.
  *
- * @author (your name)
+ * @author Quentin Hadar Nora Jasharaj Moritz Mairle
  */
 public final class HouseWall {
     private final Location start;

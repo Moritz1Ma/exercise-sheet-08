@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * This class sets up the race
  *
- * @author your name
+ * @author Quentin Hadar Nora Jasharaj Moritz Mairle
  */
 public final class OlympicsHamsterGame extends SimpleHamsterGame {
     List<RunnerHamster> runners;

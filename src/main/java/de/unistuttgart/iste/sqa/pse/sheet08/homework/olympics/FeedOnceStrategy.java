@@ -3,9 +3,9 @@ package de.unistuttgart.iste.sqa.pse.sheet08.homework.olympics;
 import de.hamstersimulator.objectsfirst.external.model.Hamster;
 
 /**
- * TODO write documentation here.
+ * A strategy so that the hamster feeds only once while running
  *
- * @author Quentin Hadar
+ * @author Quentin Hadar Nora Jasharaj Moritz Mairle
  */
 public final class FeedOnceStrategy implements FeedingStrategy {
 

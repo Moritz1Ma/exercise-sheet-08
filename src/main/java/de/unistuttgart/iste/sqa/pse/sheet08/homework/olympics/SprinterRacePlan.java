@@ -4,7 +4,7 @@ package de.unistuttgart.iste.sqa.pse.sheet08.homework.olympics;
  * Implements a Race Plan in which the RunnerHamster runs hard
  * till he is exhausted and changes it .
  *
- * @author Moritz, Quentin
+ * @author Quentin Hadar Nora Jasharaj Moritz Mairle
  */
 public final class SprinterRacePlan implements RacePlan {
 

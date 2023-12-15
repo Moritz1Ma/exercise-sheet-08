@@ -1,9 +1,9 @@
 package de.unistuttgart.iste.sqa.pse.sheet08.homework.olympics;
 
 /**
- * TODO write documentation here.
+ * A strategy so that the hamster feeds twice while running
  *
- * @author Quentin Hadar
+ * @author Quentin Hadar Nora Jasharaj Moritz Mairle
  */
 public final class FeedTwiceStrategy implements FeedingStrategy {
 
