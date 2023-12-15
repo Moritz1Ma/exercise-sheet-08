@@ -5,6 +5,8 @@ import de.hamstersimulator.objectsfirst.datatypes.Location;
 import de.hamstersimulator.objectsfirst.external.model.TerritoryBuilder;
 import de.hamstersimulator.objectsfirst.external.simple.game.SimpleHamsterGame;
 import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.House;
+import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.HouseBuilder;
+import de.unistuttgart.iste.sqa.pse.sheet08.homework.habitat.house.HouseWall;
 
 /**
  * The habitat hamster game.
@@ -18,8 +20,18 @@ public final class HabitatHamsterGame extends SimpleHamsterGame {
 
 		TerritoryBuilder territoryBuilder = game.getNewTerritoryBuilder();
 
-		// TODO Implement exercise 2 (d) between here...
+		// TODO Implement exercise 2 (d) between here..
+		HouseWall topLeftWall = new HouseWall(new Location(1, 1), new Location(1, 8));
+		topLeftWall.addDoor(new Location(1,3));
+		HouseWall topRightWall = new HouseWall(new Location(2,7), new Location(2, 10));
+		HouseWall leftWall = new HouseWall(new Location(2,1), new Location(5, 1));
+		HouseWall rightWall = new HouseWall(new Location(3, 10), new Location(5, 10));
+		rightWall.addDoor(new Location(4, 10));
+		HouseWall bottomWall = new HouseWall(new Location(6,1), new Location(6, 10));
 
+		HouseBuilder houseBuilder = new HouseBuilder(territoryBuilder, game.getTerritory());
+		houseBuilder.withWall(topLeftWall).withWall(topRightWall).withWall(leftWall).withWall(rightWall)
+				.withWall(bottomWall).build();
 		// ...and here. Do NOT put any code after here.
 
 		game.initialize(territoryBuilder);

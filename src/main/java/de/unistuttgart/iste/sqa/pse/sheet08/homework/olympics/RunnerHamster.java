@@ -17,11 +17,13 @@ import de.hamstersimulator.objectsfirst.external.model.Territory;
  */
 public final class RunnerHamster extends Hamster {
 	// the strategies this runner follows during the race
+
+	protected int intensityLevel;
 	protected RacePlan runningTactic;
 	protected FeedingStrategy feedingTactic;
 
 	private int energyRemaining;
-	private int actionsTaken;
+	private int actionsTaken = -3;
 
 	public RunnerHamster(final Territory territory, final Location location, final Direction direction) {
 		super(territory, location, direction, 0);
@@ -131,6 +133,8 @@ public final class RunnerHamster extends Hamster {
 	 * hamster executes exactly one step according to their feedingTactic or
 	 * runningTactic. Ensures that the actionsTaken counter increments by one.
 	 */
+
+	private int count = 0;
 	public void executeNextAction() {
 		if (isAtFeedZone() && feedingTactic.isFeedingRequired()) {
 			useFeedZone();
