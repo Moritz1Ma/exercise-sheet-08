@@ -43,14 +43,16 @@ public final class HouseWall {
      *
      * @param start location of the wall's first part
      * @param end   location of the wall's last part
+     * @throws NullPointerException if either start or end or both are null
+     * @throws IllegalArgumentException if class invariants are not fulfilled
      */
     public HouseWall(final Location start, final Location end) {
         if(start == null || end == null){
-            throw new IllegalArgumentException("Start or end may not be null");
+            throw new NullPointerException("Start or end may not be null");
         }else if (!areInLine(start, end)) {
             throw new IllegalArgumentException("Start and end must be in a line");
         }else if (start == end) {
-            throw new IllegalArgumentException("A wall must at least have a length of two tiles ");
+            throw new IllegalArgumentException("A wall must at least have a length of two tiles");
         } else if (!isStartSmallerThanEnd(start, end)){
             throw new IllegalArgumentException("Start must be closer to the territories origin");
         }
@@ -83,8 +85,6 @@ public final class HouseWall {
         }
 
         this.door = Optional.of(newDoor);
-
-
     }
 
     /**

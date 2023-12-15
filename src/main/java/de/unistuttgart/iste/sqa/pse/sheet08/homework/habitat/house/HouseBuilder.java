@@ -112,6 +112,11 @@ public final class HouseBuilder {
 			int column = wall.getStart().getColumn();
 			wallStart = wall.getStart().getRow();
 			wallEnd = wall.getEnd().getRow();
+			/*@
+			 @ loop_invariant if there is no door, already placed currentRow - wallStart walls,
+			 @				  if there is a door, already placed currentRow - wallStart - 1 walls
+			 @ decreasing wallEnd - currentRow
+			 @*/
 			for (int currentRow = wallStart; currentRow <= wallEnd; currentRow++) {
 				if(wall.getDoor().isPresent() && currentRow == wall.getDoor().get().getRow()){
 					continue;
@@ -122,6 +127,11 @@ public final class HouseBuilder {
 			int row = wall.getStart().getRow();
 			wallStart = wall.getStart().getColumn();
 			wallEnd = wall.getEnd().getColumn();
+			/*@
+			 @ loop_invariant if there is no door, already placed currentColumn - wallStart walls,
+			 @				  if there is a door, already placed currentColumn - wallStart - 1 walls
+			 @ decreasing wallEnd - currentColumn
+			 @*/
 			for(int currentColumn = wallStart; currentColumn <= wallEnd; currentColumn++){
 				if(wall.getDoor().isPresent() && currentColumn == wall.getDoor().get().getColumn()){
 					continue;

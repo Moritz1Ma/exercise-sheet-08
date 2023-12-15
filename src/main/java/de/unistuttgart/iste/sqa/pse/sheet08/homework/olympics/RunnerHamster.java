@@ -18,12 +18,11 @@ import de.hamstersimulator.objectsfirst.external.model.Territory;
 public final class RunnerHamster extends Hamster {
 	// the strategies this runner follows during the race
 
-	protected int intensityLevel;
 	protected RacePlan runningTactic;
 	protected FeedingStrategy feedingTactic;
 
 	private int energyRemaining;
-	private int actionsTaken = -3;
+	private int actionsTaken = 0;
 
 	public RunnerHamster(final Territory territory, final Location location, final Direction direction) {
 		super(territory, location, direction, 0);
